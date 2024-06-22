@@ -11,8 +11,10 @@ int registro () //Função resposável por cadastrar usuários no sistema
 	char nome[40];
 	char  sobrenome[40];
 	char cargo[40];
+	int num;
 	//final da criação de variáveis
 	
+	system("cls");//limpa a tela	
 	printf("Digite o CPF a ser cadastrado:  ");//coletando informação do usuário
 	scanf("%s", cpf); //%s salva string
 	
@@ -57,7 +59,22 @@ int registro () //Função resposável por cadastrar usuários no sistema
 	fclose(file);
 	
 	fclose(file);
+	
+	printf("\n\nGostaria de incluir um novo cadastro?\n");
+	printf("1-SIM\n2-NÃO\n");
+	printf("Opção:\t");
+	scanf ("%d",&num);
+		if (num==1)
+        {
+        	printf ("\n\nRetornando ao registro de usuários.\n\n");
+        	system("pause");
+        	return registro();
+        }
+	if (num==2)
+   		printf ("\n\nRetornando ao menu principal.\n\n");
 	system("pause");
+	return main();
+	
 	
 }
 
