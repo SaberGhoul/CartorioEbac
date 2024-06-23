@@ -207,9 +207,24 @@ int main()
 {
 	int opcao=0; // Definindo as variáveis
 	int laco=1;
+	char senha[10]="a";
+	int comparacao;
+	setlocale(LC_ALL, "Portuguese"); // Definindo a linguagem
 	
-	for(laco=1;laco=1;)
-	{
+	system("cls"); //Limpa a tela
+	
+	printf("### Cartório da EBAC ###\n\n");//criação da tela de login de administrador
+	printf("Login de administrador!\n\nDigite sua senha: ");
+	scanf("%s",senha);//armazenando a string "senha"
+	
+	comparacao = strcmp(senha, "admin");
+	
+	if(strcmp(senha, "admin") == 0)
+		
+	{	
+		
+		for(laco=1;laco=1;)
+		{
 		
 		system("cls"); //Limpa a tela
 			
@@ -227,8 +242,8 @@ int main()
 
 		system("cls");
 		
-		switch(opcao) //inicio da seleção do função
-		{
+			switch(opcao) //inicio da seleção do função
+			{
 			case 1:
 			registro();//Chamada de função
 			break;
@@ -252,6 +267,15 @@ int main()
 			system("pause");
 			break;
 			
+			}
 		}
 	}
+	else
+	printf("Senha incorreta\n\n");
+	system("pause");
+	return main();
+	
+		
+	
 }
+	
